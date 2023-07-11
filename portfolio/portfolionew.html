@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Charm&family=Hind+Siliguri&family=Noto+Sans&family=Roboto&display=swap" rel="stylesheet">
+    <title>Personal Portfolio</title>
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+:root{
+    --primary-color:rgb(255, 72, 0);
+    --secondary-color:black;
+    --tertiary-color:rgb(16, 25, 143);
+    --quad-color: rgb(14, 184, 8);
+}
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: var(--quad-color);
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 30px;
+  color: rgb(218, 214, 214);
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #f8f8fa;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: var(--secondary-color);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.head-1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.head-3{
+    color: var(--tertiary-color);
+}
+.lorem-text{
+    width: 200px;
+    color: rgb(160, 17, 17);
+}
+.home-image{
+    width: 400px;
+
+
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+}
+.btn-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  
+    
+}
+.btn1:hover{
+    background-color: white;
+    border: 2px solid var(--primary-color);
+    color: black;
+}
+.headings{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+.home{
+    padding: 30px;
+}
+.head-hobbies{
+    font-size: 50px;
+    color: var(--tertiary-color);
+    font-weight: bolder;
+    text-align: center;
+}
+.hobbies-headlines{
+    font-size: 30px;
+    margin-top: 10px;
+    color: rgb(77, 148, 100);
+    font-weight: bolder;
+    text-align: center;
+}
+.btn1{
+    background-color: var(--primary-color);
+    width: 250px;
+    text-align: center;
+    padding: 10px;
+  
+    border-radius: 100px;
+    color: white;
+    margin-right: 100px;
+}
+.code,.music,.basketball,.travel,.cricket{
+    width: 120px;
+    height: 100px;
+}
+
+.icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icontext{
+    font-size: 20px;
+    font-weight: bolder;
+    
+}
+
+.icon{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.btn2{
+    width: 120px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--secondary-color);
+    border: 2px solid rgb(7, 6, 6);
+    
+}
+.icon{
+    margin: 40px;
+}
+.icons{
+    flex-wrap: wrap;
+}
+
+.section-1{
+    border: 2px solid rgb(3, 5, 26);
+    width: 400px;
+    height: 10px;
+}
+.skills-inner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.skills-icon{
+    width: 60px;
+    height: 50px;
+}
+.skills-icon-css{
+    width: 50px;
+    height: 50px;
+}
+
+.rating{
+    margin-top: 20px;
+}
+.footer{
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    width: 100vw;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(248, 240, 240);
+    flex-wrap: wrap;
+    font-size: 20px;
+padding: 20px;
+}
+.section-2a{
+    background-color: rgb(27, 126, 7);
+    width: 350px;
+    height: 8px;
+}
+.section-2b{
+    background-color: rgb(192, 121, 15);
+    width: 150px;
+    height: 8px;
+}
+.section-2c{
+    background-color: rgb(151, 8, 8);
+    width: 50px;
+    height: 8px;
+}
+.section-2d{
+    background-color: black;
+    width: 350px;
+    height: 8px;
+}
+
+@media (min-width:720px) {
+.cricket,.music{
+    margin-top: 150px;
+    
+}
+.icontext{
+    color: var(--primary-color);
+    padding-top: 15px;
+}
+.icons{
+    margin-top: -50px;
+   
+}
+}
+@media screen and (max-width:460px) {
+    .head-1{
+        font-size: 20px;
+    }
+    .head-hobbies{
+        font-size: 20px;
+    }
+    .hobbies-headlines{
+        font-size: 10px;
+    }
+    .lorem-text
+    {
+        font-size: 15px;
+    }
+    .headings{
+        margin-left: 40px;
+    }
+    .section-1{
+        width: 200px;
+    }
+    .section-2a{
+        width: 100px;
+    }
+    .section-2b{
+        width: 160px;
+    }
+    .section-2c{
+        width: 10px;
+    }
+    .section-2d{
+        width: 120px;
+    }
+    .home-image{
+        width: 250px;
+    }
+    .lorem-text{
+    width: 280px;
+    color: gray;
+}
+    
+}
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: va;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+html{
+    scroll-behavior: smooth;
+}
+.active{
+    border-bottom: 4px solid black;
+}
+.nav-title{
+    font-family: 'Charm', cursive;
+font-family: 'Hind Siliguri', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+}
+
+</style>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Aman Bangari
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#Home" class="active" onclick="onClick(`Home-nav`)" id="Home-nav"><b>Home</b></a>
+          <a href="#Skills" onclick="onClick(`Skills-nav`)" id="Skills-nav"><b>Skills</b></a>
+          <a href="#Hobbies" onclick="onClick(`Hobbies-nav`)" id="Hobbies-nav"><b>My Hobbies</b></a>
+        </div>
+      </div>
+      <div class="home" id="Home">
+          <div class="headings" data-aos="fade-right" data-aos-duration="2000">
+              <div class="head-1">Hey</div>
+              <div class="head-1">I'am <span class="head-3">Aman Bangari</span></div>
+              <div class="head-1">(Developer and Coder)</div>
+              <p class="lorem-text">
+                  <b>I am a Btech ICE student from MAIN CAMPUS NSUT , Looking forward to join the best company as an intern</b>
+            </p>
+              <div class="btn-wrap">
+                  
+                  <div class="btn1">Skills</div>
+                  <div class="btn2">Hobbies</div>
+                </div>
+          </div>
+          <img src="images/aman.png" class="home-image" data-aos="fade-up" data-aos-duration="2000">
+      </div>
+      <hr>
+      <div class="hobbies" id="Hobbies">
+          <div class="head-hobbies">My Hobbies</div>
+          <div class="hobbies-headlines">
+              These are some of my hobbies that i pursue in free time
+          </div>
+          <div class="icons">
+              <div class="icon">
+                <img src="images/swim.png" class="code" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">swimmimg</div>
+              </div>
+              <div class="icon">
+                <img src="images/Cricket.png" class="cricket" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Cricket</div>
+              </div>
+              <div class="icon">
+                <img src="images/movies.png" class="basketball" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">watch movies</div>
+              </div>
+              <div class="icon">
+                <img src="images/Music.png" class="music" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Music</div>
+              </div>
+              <div class="icon">
+                <img src="images/keyboard.png" class="travel" data-aos="fade-up" data-aos-duration="2000">
+                <div class="icontext" data-aos="fade-right" data-aos-duration="2000">Keyboard</div>
+              </div>
+          </div>
+      </div>
+      <hr><br>
+      <div class="skills" id="Skills">
+        <div class="head-hobbies">Skills</div>
+        <div class="hobbies-headlines">
+            Not skilled , just started the journey , but here are some....
+        </div>
+        <div class="skills-inner">
+ 
+        <div class="skills-wrap">
+            <img src="images/Skills.jpg" class="skills-image home-image" data-aos="fade-up" data-aos-duration="2000">
+        </div>
+        <div class="ratings" data-aos="fade-left" data-aos-duration="2000">
+            <div class="rating">
+                <img src="images/Html.png" class="skills-icon">
+                <div class="section-1">
+                    <div class="section-2a"></div>
+                </div>
+            </div>
+            <div class="rating">
+                <img src="images/CSS.png" class="skills-icon-css">
+                <div class="section-1">
+                    <div class="section-2b"></div>
+                </div>
+            </div>
+            <div class="rating">
+                <img src="images/Javascript.png" class="skills-icon">
+                <div class="section-1">
+                    <div class="section-2c"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <marquee>
+            <div class="footer-text"><b>All rights reserved | 2022 ©</b></div>
+            <div class="footer-text"><b>Made with 🤍 by Aman Bangari</b></div>
+            <div class="footer-text"><b>Privacy Policy.</b></div></marquee>
+        </div>
+    </div>
+      </div>
+</body>
+<script>
+    var arr=Array("Home-nav","Skills-nav","Hobbies-nav");
+    function onClick(props)
+    {
+      
+        for (let index = 0; index < arr.length; index++) {
+            const element = arr[index];
+            var ele=document.getElementById(element);
+            if(element===props){
+              ele.classList.add("active");
+            }else{
+                ele.classList.remove("active");
+            }
+            
+        }
+    }
+    AOS.init();
+    </script>
+</html>
